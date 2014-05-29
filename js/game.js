@@ -2,13 +2,32 @@
 $(document).ready(function(){
 	var answer = Math.ceil(Math.random()*100);
 var number = [];
-var dif, d, i=0;
+var dif, d, i=0, temp;
 function diff(a,b){
 	return Math.abs(b-a);
 }
 	alert("the answer is " + answer);
 		$('#submit').on('click', function(){
-			number[i] = $('#guess_txt').val();
+			temp = $('#guess_txt').val();
+				if(i==0)
+				{
+					number[i] = temp;
+				}
+				else if (i!= 0)
+				{
+					for(j=0; j<i; j++)
+					{
+						if(number[j] == temp)
+						{
+							alert("You already guessed that!");
+							break;
+						}
+						else
+						{
+							number[i] = temp;
+						}
+					}
+				}
 			$("#sofar").text(number);
 			d = answer - number[i];
 			if(number[i]<1 || number[i] >101)
