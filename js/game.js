@@ -43,7 +43,8 @@ $(document).ready(function(){
 			dif[i] = diff(number[i],answer);
 			if (dif[i] == 0)
 			{
-				$("#status").text("Congratulations! You guessed it right.")
+				$("#status").text("Congratulations! You guessed it right. Here, have a cat.")
+				$('img').show();
 			}
 			else if(dif[i] <5)
 			{
@@ -89,10 +90,11 @@ $(document).ready(function(){
 		{
 				if (dif[i] == 0)
 			{
-				$("#status").text("Congratulations! You guessed it right.")
+				$("#status").text("Congratulations! You guessed it right. Here, have a cat.")
+				$('img').show();
 			}
 			else
-			{		
+			{
 				$("#status").text('You used up all your chances! The answer is ' + answer + ".");
 				$('#guess_txt').val("");
 			}
