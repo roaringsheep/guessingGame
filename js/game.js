@@ -6,7 +6,6 @@ $(document).ready(function(){
 	function diff(a,b){
 		return Math.abs(b-a);
 	}
-	alert(answer);
 	$('#submit').on('click', function(){
 		temp = $('#guess_txt').val();
 
