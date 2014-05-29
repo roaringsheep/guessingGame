@@ -1,5 +1,59 @@
-body{
+/****************************
+General
+*****************************/
+head
+{
+
+}
+body
+{
 background-color: #ccffcc;
+}
+/****************************
+Body
+*****************************/
+header
+{
+text-align: center;
+margin: 0 auto;
+padding: 20px;
+}
 
+/****************************
+Form
+*****************************/
+button
+{
+	border-style: none;
+	background-color: yellow;
+	color: green;
+	font-weight: bolder;
+	padding: 10px 5px;
+	margin: 5px 15px;
+}
+#submit
+{
+	border-style: none;
+	background-color: yellow;
+	color: green;
+	font-weight: bolder;
+	padding: 10px 25px;
+	margin: 10px
+}
+#guess_txt
+{
+	padding: 10px;
+	margin: 15px;
+}
+form
+{
+	margin: 0 auto;
+	background-color: rgba(0,50,100,.3);
 
+}
+div
+{
+	vertical-align: middle;
+	margin-top: 50px;
+	max-width: 300px;
 }
