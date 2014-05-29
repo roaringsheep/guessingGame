@@ -6,7 +6,6 @@ var dif=[], d, i=0, temp;
 function diff(a,b){
 	return Math.abs(b-a);
 }
-	alert("the answer is " + answer);
 		$('#submit').on('click', function(){
 			temp = $('#guess_txt').val();
 				if(i==0)
@@ -42,7 +41,7 @@ function diff(a,b){
 				dif[i] = diff(number[i],answer);
 				if (dif[i] == 0)
 				{
-					$("#status").text("Congratulations! You guessed correct.")
+					$("#status").text("Congratulations! You guessed it right.")
 				}
 				else if(dif[i] <5)
 				{
@@ -64,13 +63,24 @@ function diff(a,b){
 				{
 					$("#status").text("You are freezing cold. ");
 				}
-				if(d>0)
+				if(dif[i]!=0)
 				{
-					$("#status").append("Guess higher.");
-				}
-				else
-				{
-					$("#status").append("Guess lower.");
+					if(d>0)
+					{
+						$("#status").append("Guess higher.");
+					}
+					else
+					{
+						$("#status").append("Guess lower.");
+					}
+					if(dif[i]<=dif[i-1])
+					{
+						$('#status').append(" You are getting Hotter!")
+					}
+					else if (i != 0)
+					{
+						$('#status').append(" You are getting colder :'(")
+					}
 				}
 			}
 			if(i==4)
